@@ -1,0 +1,21 @@
+services:
+  energy-plugin:
+    build: ./plugin
+    ports:
+      - "5000:5000"
+
+  process-a:
+    build: ./consumer
+    environment:
+      - PROCESS_ID=a
+      - ESSENTIAL=true
+    depends_on:
+      - energy-plugin
+
+  process-b:
+    build: ./consumer
+    environment:
+      - PROCESS_ID=b
+      - ESSENTIAL=false
+    depends_on:
+      - energy-plugin
