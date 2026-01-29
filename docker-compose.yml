@@ -3,19 +3,27 @@ services:
     build: ./plugin
     ports:
       - "5000:5000"
+    networks:
+      - energy-net
 
   process-a:
     build: ./consumer
     environment:
-      - PROCESS_ID=a
-      - ESSENTIAL=true
+      - PROCESS_ID=process-a
     depends_on:
       - energy-plugin
+    networks:
+      - energy-net
 
   process-b:
     build: ./consumer
     environment:
-      - PROCESS_ID=b
-      - ESSENTIAL=false
+      - PROCESS_ID=process-b
     depends_on:
       - energy-plugin
+    networks:
+      - energy-net
+
+networks:
+  energy-net:
+    driver: bridge
