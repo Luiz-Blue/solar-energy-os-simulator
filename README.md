@@ -88,7 +88,7 @@ Se ( E(t) \geq L ), o processo é executado; caso contrário, ele é adiado.
 
 ---
 
-## 🗂️ **Estrutura do Projeto**
+##  **Estrutura do Projeto**
 
 ```
 solar-energy-os-simulator/
@@ -172,9 +172,5 @@ Material de estudo / base teórica
 
 WRENCH Simulator Documentation. Disponível em:
 https://wrench-project.org/
-
-Acesso em: (insira a data de acesso).
-
-Kalla, A.; et al. Energy-aware scheduling in data centers powered by renewable energy. (Exemplo — ajuste conforme seus artigos reais).
 
 Beloglazov, A.; Buyya, R. Energy-efficient resource management in cloud computing. (Base clássica na área).
